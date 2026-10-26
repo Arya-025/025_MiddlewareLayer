@@ -51,3 +51,10 @@ function errorResponse(res, message,status, details = null) {
         details,
     })
 }
+
+const biodataSchema = joi.object({
+    id: joi.number().integer().required(),
+    nama: joi.string().required(),
+    nim: joi.string().required(),
+    kelas: joi.string().required(),
+})
